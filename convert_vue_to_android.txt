@@ -1,0 +1,18 @@
+#########install
+jdk 11
+Android 10 (API level 29) => sdk 29
+gradle 8.5
+
+#########create ionic project android
+npm install -g @ionic/cli
+git clone https://github.com/OussemaJbeli/weather-app.git weather-app
+
+######### run on browser
+ionic serve
+
+######### run on emilator
+ionic capacitor run android -l --external
+
+########## build to android studio
+ionic capacitor build android
+

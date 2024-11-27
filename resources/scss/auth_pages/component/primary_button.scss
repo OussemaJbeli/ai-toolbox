@@ -1,0 +1,17 @@
+/*******buttons*****/
+.primary_button{
+    min-width: 135px;
+    min-height: 45px;
+    border-radius: 10px;
+    background-color: #132650;
+    border: 0px solid transparent;
+    font-size: 18px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s ease;
+}
+.in_app{
+    background-color: var(--action_color);
+}

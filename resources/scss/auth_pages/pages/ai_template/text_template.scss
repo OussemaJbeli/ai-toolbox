@@ -1,0 +1,994 @@
+.beforForm{
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--bg2);
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: calc(100% - 30px);
+  margin: 15px;
+  .title{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      .logo{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          p{
+              width: 70px;
+              height: 40px;
+              border-radius: 10px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              i{ 
+                font-size: 20px;
+              }
+          }
+          .title{
+              color: var(--title2);
+              font-weight: 700;
+              font-size: 18px;
+              margin-left: 10px;
+          }
+          .plan_level{
+              p{
+                  height: auto;
+                  border-radius: 10px;
+                  padding: 2px 5px;
+                  font-size: 10px;
+                  color: #fff;
+                  i{
+                      margin-right: 5px;
+                      font-size: 10px;
+                  }
+              }
+              .Premium{
+                  background-color:#9047bb;
+              }
+              .Pro{
+                  background-color:#ffea00;
+              }
+              .Free{
+                  background-color:#00ff6a;
+              }
+          }
+      }
+      .star{
+          position: relative;
+          .container input {
+              position: absolute;
+              opacity: 0;
+              cursor: pointer;
+              height: 0;
+              width: 0;
+          }
+          
+          .container {
+              display: block;
+              position: relative;
+              cursor: pointer;
+              user-select: none;
+          }
+          
+          .container svg {
+              position: relative;
+              top: 0;
+              left: 0;
+              height: 30px;
+              width: 30px;
+              transition: all 0.3s;
+              fill: #666;
+          }
+          
+          .container svg:hover {
+              transform: scale(1.1);
+          }
+          
+          .container input:checked ~ svg {
+              fill: #ffe100;
+          }
+      }
+      .star::after {
+          z-index: 999;
+          opacity: 0;
+          content: "Add to favorit";
+          position: absolute;
+          background-color: var(--bg2);
+          top: -40px;
+          left: -61px;
+          font-size: 12px;
+          height: 30px;
+          width: 150px;
+          transition: .4s ease;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 10px;
+          color: var(--title2);
+          border: 2.5px solid var(--action_color);
+          font-weight: 600;
+      }
+      .star::before {
+          z-index: 999;
+          opacity: 0;
+          content: "";
+          position: absolute;
+          top: -10px;
+          left: 6px;
+          transition: .4s ease;
+          border: 10px solid transparent;
+          border-color: var(--action_color) transparent transparent;
+      }
+      .star:hover::after {
+          opacity: 1;
+      }
+      .star:hover::before {
+          opacity: 1;
+      }
+  }
+  .description{
+      padding: 10px 0;
+      font-size: 14px;
+      color: var(--title2);
+  }
+
+}
+.text_tools_template{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    .first_part{
+        width: 350px;
+        margin: 0px 10px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        background-color: var(--bg2);
+        border-radius: 10px;
+        padding: 10px;
+        form{
+          position: relative;
+          .dark_sidbar{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000000b0;
+            border-radius: 10px;
+            z-index: 9;
+          }
+          .wrapper_feild {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            width: 30px;
+            height: 30px;
+            transition: 0.4s ease;
+            z-index: 100;
+          
+            .feild_circle {
+              display: block;
+              position: relative;
+              padding: 0;
+              z-index: 98;
+              margin: 0 auto;
+              -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+              box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+              background-color: transparent;
+              border-radius: 50%;
+              height: 30px;
+              width: 30px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: var(--title2);
+              transition: .4s ease;
+            }
+            
+            .feild_circle:active {
+              box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.3);
+            }
+            .feild_circle i {
+              transition: 0.4s ease;
+            }
+            .feild_circle:hover {
+              cursor: pointer;
+              box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.3);
+            }
+            
+            .sub-feild_circle {
+              z-index: 0;
+              position: absolute;
+              height: 40px;
+              width: 40px;
+              border-radius: 50%;
+              transition: 0.3s;
+              transform: scale(0.1);
+              opacity: 0;
+              padding: 0;
+              margin: 0;
+              box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+              border: none;
+            }
+            
+            .sub-feild_circle label {
+              background-color: var(--action_color);
+              display: block;
+              color: white;
+              width: 100%;
+              height: 100%;
+              line-height: 40px;
+              transition: .5s;
+              position: relative;
+              border-radius: 50%;
+              span{
+                  background-color: var(--action_color);
+                  position: absolute;
+                  right: 45px;
+                  z-index: 0;
+                  height: 40px;
+                  min-width: 150px;
+                  border-radius: 20px;
+                  transition: 0.3s;
+                  border: none;
+              }
+            }
+            
+            .sub-feild_circle label:hover {
+              cursor: pointer;
+              background-color: transparent;
+            }
+            
+            .feild_subs {
+              left: -20px;
+              top: -50px;
+              width: 40px;
+              height: 40px;
+              text-align: center;
+              z-index: 0;
+              margin: 0 auto;
+              position: relative;
+            }
+            
+            .hidden-sub-trigger {
+              display: none;
+            }
+            
+            .faild_hidden-trigger {
+              display: none;
+            }
+            
+            .faild_hidden-trigger:checked ~ .feild_circle {
+              transform: rotateZ(-45deg);
+              box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.1);
+              background-color: var(--action_color);
+              color: #fff;
+            }
+            
+            
+            .faild_hidden-trigger:checked ~ .feild_subs .sub-feild_circle1 {
+              transform: translate(-60px, 15px) scale(1);
+              opacity: 1;
+              transition: 0.1s;
+            }
+            
+            .faild_hidden-trigger:checked ~ .feild_subs .sub-feild_circle2 {
+              transform: translate(-105px, 15px) scale(1);;
+              opacity: 1;
+              transition: 0.3s;
+            }
+            
+            .faild_hidden-trigger:checked ~ .feild_subs .sub-feild_circle3 {
+              transform: translate(-150px, 15px) scale(1);
+              opacity: 1;
+              transition: 0.5s;
+            }
+          }
+        }
+        .words_balence{
+            width: 100%;
+            border-radius: 10px;
+            background-color: var(--bg1);
+            padding: 10px 15px;
+            color: var(--title1);
+            text-align: center;
+            margin-bottom: 10px;
+            span{
+              font-size: 16px;
+              color: var(--action_color);
+            }
+        }
+        .inputs{
+          overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            color: var(--title1);
+            position: relative;
+            .hover_button{
+              position: absolute;
+              right: 10px;
+              top: 10px;
+              border-radius: 5px;
+              padding: 10px 20px;
+              background-color: #6cbe5c;
+              color: #fff;
+              transition: 1s ease;
+              transform: translateX(100px);
+            }
+            @keyframes showbut {
+              0%{
+                transform: translateX(100px);
+              }
+              100%{
+                transform: translateX(0);
+              }
+            }
+            .delete{
+              background-color: #c57676;
+            }
+            label{
+                color: var(--title2);
+                font-size: 15px;
+                padding: 10px 0;
+            }
+            .input{
+                width: 100%;
+                font-size: 13px;
+                border-radius: 10px;
+                background-color: var(--bg1);
+                padding: 10px 15px;
+            }
+            textarea{
+                width: 100%;
+                height: 100px;
+                border-radius: 10px;
+                background-color: var(--bg1);
+                padding: 10px 15px;
+            }
+        }
+        .inputs_sub{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--title1);
+            .section{
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                width: 45%;
+                .inputs{
+                    width: 100%;
+                    label{
+                        font-size: 11px;
+                    }
+                }
+            }
+        }
+        .generate_butt{
+            padding: 30px 0 10px;
+            .button{
+                right: 15px;
+                top: 0;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .sp {
+                    position: relative;
+                    .sparkle-button {
+                        --active: 0;
+                        background: var(--action_color);
+                        font-size: 16px;
+                        font-weight: 500;
+                        border: 0;
+                        cursor: pointer;
+                        padding: 10px;
+                        display: flex;
+                        align-items: center;
+                        gap: 0.25em;
+                        white-space: nowrap;
+                        border-radius: 100px;
+                        position: relative;
+                        transition: .3s;
+                      }
+                      
+                      .sparkle-button:active {
+                        scale: 1;
+                        transition: .3s;
+                      }
+                      
+                      .sparkle path {
+                        color: #fff;
+                        transform-box: fill-box;
+                        transform-origin: center;
+                        fill: currentColor;
+                        stroke: currentColor;
+                        animation-delay: calc((var(--transition) * 1.5) + (var(--delay) * 1s));
+                        animation-duration: 0.6s;
+                        transition: color var(--transition);
+                      }
+                      
+                      .sparkle-button:is(:hover, :focus-visible) path {
+                        animation-name: bounce;
+                      }
+                      
+                      @keyframes bounce {
+                        35%, 65% {
+                          scale: var(--scale);
+                        }
+                      }
+                      
+                      .sparkle path:nth-of-type(1) {
+                        --scale: 0.5;
+                        --delay: 0.1;
+                        --base: 40%;
+                      }
+                      
+                      .sparkle path:nth-of-type(2) {
+                        --scale: 1.5;
+                        --delay: 0.2;
+                        --base: 20%;
+                      }
+                      
+                      .sparkle path:nth-of-type(3) {
+                        --scale: 2.5;
+                        --delay: 0.35;
+                        --base: 30%;
+                      }
+                      
+                      .sparkle-button:before {
+                        content: "";
+                        position: absolute;
+                        inset: -0.2em;
+                        z-index: -1;
+                        border: 0 solid var(--action_color);
+                        border-radius: 100px;
+                        opacity: var(--active, 0);
+                        transition: opacity var(--transition);
+                      }
+                      
+                      .spark {
+                        position: absolute;
+                        inset: 0;
+                        border-radius: 100px;
+                        rotate: 0deg;
+                        overflow: hidden;
+                        mask: linear-gradient(white, transparent 50%);
+                        animation: flip calc(var(--spark) * 2) infinite steps(2, end);
+                      }
+                      
+                      @keyframes flip {
+                        to {
+                          rotate: 360deg;
+                        }
+                      }
+                      
+                      .spark:before {
+                        content: "";
+                        position: absolute;
+                        width: 200%;
+                        aspect-ratio: 1;
+                        top: 0%;
+                        left: 50%;
+                        z-index: -1;
+                        translate: -50% -15%;
+                        rotate: 0;
+                        transform: rotate(-90deg);
+                        opacity: calc((var(--active)) + 0.4);
+                        background: conic-gradient(
+                              from 0deg,
+                              transparent 0 340deg,
+                              white 360deg
+                          );
+                        transition: opacity var(--transition);
+                        animation: rotate var(--spark) linear infinite both;
+                      }
+                      
+                      .spark:after {
+                        content: "";
+                        position: absolute;
+                        inset: var(--cut);
+                        border-radius: 100px;
+                      }
+                      
+                      .backdrop {
+                        position: absolute;
+                        inset: var(--cut);
+                        background: var(--bg);
+                        border-radius: 100px;
+                        transition: background var(--transition);
+                      }
+                      
+                      @keyframes rotate {
+                        to {
+                          transform: rotate(90deg);
+                        }
+                      }
+                      
+                      @supports(selector(:has(:is(+ *)))) {
+                        body:has(button:is(:hover, :focus-visible)) {
+                          --active: 1;
+                          --play-state: running;
+                        }
+                      
+                        .bodydrop {
+                          display: none;
+                        }
+                      }
+                      
+                      .sparkle-button:is(:hover, :focus-visible) ~ :is(.bodydrop, .particle-pen) {
+                        --active: 1;
+                        --play-state: runnin;
+                      }
+                      
+                      .sparkle-button:is(:hover, :focus-visible) {
+                        --active: 1;
+                        --play-state: running;
+                        box-shadow: 0 0 20px 0 var(--action_color);
+                      }    
+                    .particle-pen {
+                        position: absolute;
+                        width: 100%;
+                        aspect-ratio: 1;
+                        top: 50%;
+                        left: 50%;
+                        translate: -50% -50%;
+                        -webkit-mask: radial-gradient(white, transparent 65%);
+                        z-index: -1;
+                        opacity: var(--active, 0);
+                        transition: opacity var(--transition);
+                      }
+                      
+                      .particle {
+                        fill: white;
+                        width: calc(var(--size, 0.25) * 1rem);
+                        aspect-ratio: 1;
+                        position: absolute;
+                        top: calc(var(--y) * 1%);
+                        left: calc(var(--x) * 1%);
+                        opacity: var(--alpha, 1);
+                        animation: float-out calc(var(--duration, 1) * 1s) calc(var(--delay) * -1s) infinite linear;
+                        transform-origin: var(--origin-x, 1000%) var(--origin-y, 1000%);
+                        z-index: -1;
+                        animation-play-state: var(--play-state, paused);
+                      }
+                      
+                      .particle path {
+                        fill: hsl(0 0% 90%);
+                        stroke: none;
+                      }
+                      
+                      .particle:nth-of-type(even) {
+                        animation-direction: reverse;
+                      }
+                      
+                      @keyframes float-out {
+                        to {
+                          rotate: 360deg;
+                        }
+                      }
+                      
+                      .text {
+                        translate: 2% -6%;
+                        letter-spacing: 0.01ch;
+                        background: linear-gradient(90deg, hsl(0 0% calc((var(--active) * 100%) + 65%)), hsl(0 0% calc((var(--active) * 100%) + 26%)));
+                        -webkit-background-clip: text;
+                        color: #fff;
+                        transition: background var(--transition);
+                      }
+                      
+                      .sparkle-button svg {
+                        inline-size: 1.25em;
+                        translate: -25% -5%;
+                      }
+                  }
+            }
+        }
+    }
+    .second_part{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: calc(100% - 400px);
+        margin: 0px 10px;
+        .container{
+            width: 100%;
+            position: relative;
+            form{
+                width: 100%;
+                color: var(--title1);
+                header{
+                    border-radius: 10px;
+                    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                    background-color: var(--bg2);
+                    padding: 10px;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    .inputs{
+                        color: var(--title1);
+                        .input{
+                            width: 100%;
+                            font-size: 13px;
+                            border-radius: 10px;
+                            background-color: var(--bg1);
+                            padding: 10px 15px;
+                        }
+                    }
+                    .buttons{
+                      display: flex;
+                      flex-direction: row;
+                      .register_button{
+                            border-radius: 10px;
+                            padding: 5px 10px;
+                            border: 1.5px solid var(--action_color);
+                            background-color: var(--bg1);
+                            color: var(--title1);
+                            margin: 5px;
+                            cursor: pointer;
+                      }
+                      .register_button:hover{
+                          background-color: var(--action_color);
+                          color: #fff;
+                      }
+                    }
+                }
+                body{
+                    border-radius: 10px;
+                    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                    background-color: var(--bg2);
+                    padding: 10px;
+                    margin-top: 15px;
+                    width: 100%;
+                    position: relative;
+                    .text_editor_vue{
+                      .ck.ck-editor {
+                        position: relative;
+                        .ck-editor__top{
+                          background-color: transparent;
+                          color: var(--title1);
+                        }
+                        .ck-reset_all{
+                          .ck.ck-toolbar{
+                            background-color: transparent;
+                          }
+                        }
+                        .ck-reset_all :not(.ck-reset_all-excluded *), .ck.ck-reset_all{
+                          color: var(--title1);
+                        }
+                        .ck-editor__editable_inline{
+                            height: 600px;
+                            overflow-y: auto;
+                            color: #000;
+                        }
+                      }
+                      .ck.ck-button{
+                        background-color: var(--bg2);
+                      }
+                      .ck.ck-button.ck-on{
+                        background-color: var(--bg1);
+                      }
+                      .ck.ck-button:not(.ck-disabled):hover, a.ck.ck-button:not(.ck-disabled):hover{
+                        background-color: var(--action_color);
+                      }
+                      .ck.ck-editor__main>.ck-editor__editable{
+                        background-color: var(--bg1);
+                        color: var(--title1);
+                      }
+                      ol{
+                        margin-left: 20px;
+                      }
+                      h2{
+                        font-size: 30px;
+                      }
+                      h3{
+                        font-size: 25px;
+                      }
+                      h4{
+                        font-size: 20px;
+                      }
+                      p{
+                        font-size: 16px;
+                      }
+                    }
+                    .invers_direction{
+                      .ck.ck-editor__editable_inline[dir=ltr]{
+                        text-align: end;
+                      }
+                    }
+                    .isAssistantTyping{
+                      width: 100%;
+                      height: 100%;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      .pencil {
+                        position: absolute;
+                        top: 200px;
+                        display: block;
+                        width: 10em;
+                        height: 10em;
+                      }
+                      
+                      .pencil__body1,
+                      .pencil__body2,
+                      .pencil__body3,
+                      .pencil__eraser,
+                      .pencil__eraser-skew,
+                      .pencil__point,
+                      .pencil__rotate,
+                      .pencil__stroke {
+                        animation-duration: 3s;
+                        animation-timing-function: linear;
+                        animation-iteration-count: infinite;
+                      }
+                      
+                      .pencil__body1,
+                      .pencil__body2,
+                      .pencil__body3 {
+                        transform: rotate(-90deg);
+                      }
+                      
+                      .pencil__body1 {
+                        animation-name: pencilBody1;
+                      }
+                      
+                      .pencil__body2 {
+                        animation-name: pencilBody2;
+                      }
+                      
+                      .pencil__body3 {
+                        animation-name: pencilBody3;
+                      }
+                      
+                      .pencil__eraser {
+                        animation-name: pencilEraser;
+                        transform: rotate(-90deg) translate(49px,0);
+                      }
+                      
+                      .pencil__eraser-skew {
+                        animation-name: pencilEraserSkew;
+                        animation-timing-function: ease-in-out;
+                      }
+                      
+                      .pencil__point {
+                        animation-name: pencilPoint;
+                        transform: rotate(-90deg) translate(49px,-30px);
+                      }
+                      
+                      .pencil__rotate {
+                        animation-name: pencilRotate;
+                      }
+                      
+                      .pencil__stroke {
+                        animation-name: pencilStroke;
+                        transform: translate(100px,100px) rotate(-113deg);
+                      }
+                      
+                      /* Animations */
+                      @keyframes pencilBody1 {
+                        from,
+                        to {
+                          stroke-dashoffset: 351.86;
+                          transform: rotate(-90deg);
+                        }
+                      
+                        50% {
+                          stroke-dashoffset: 150.8;
+                       /* 3/8 of diameter */
+                          transform: rotate(-225deg);
+                        }
+                      }
+                      
+                      @keyframes pencilBody2 {
+                        from,
+                        to {
+                          stroke-dashoffset: 406.84;
+                          transform: rotate(-90deg);
+                        }
+                      
+                        50% {
+                          stroke-dashoffset: 174.36;
+                          transform: rotate(-225deg);
+                        }
+                      }
+                      
+                      @keyframes pencilBody3 {
+                        from,
+                        to {
+                          stroke-dashoffset: 296.88;
+                          transform: rotate(-90deg);
+                        }
+                      
+                        50% {
+                          stroke-dashoffset: 127.23;
+                          transform: rotate(-225deg);
+                        }
+                      }
+                      
+                      @keyframes pencilEraser {
+                        from,
+                        to {
+                          transform: rotate(-45deg) translate(49px,0);
+                        }
+                      
+                        50% {
+                          transform: rotate(0deg) translate(49px,0);
+                        }
+                      }
+                      
+                      @keyframes pencilEraserSkew {
+                        from,
+                        32.5%,
+                        67.5%,
+                        to {
+                          transform: skewX(0);
+                        }
+                      
+                        35%,
+                        65% {
+                          transform: skewX(-4deg);
+                        }
+                      
+                        37.5%, 
+                        62.5% {
+                          transform: skewX(8deg);
+                        }
+                      
+                        40%,
+                        45%,
+                        50%,
+                        55%,
+                        60% {
+                          transform: skewX(-15deg);
+                        }
+                      
+                        42.5%,
+                        47.5%,
+                        52.5%,
+                        57.5% {
+                          transform: skewX(15deg);
+                        }
+                      }
+                      
+                      @keyframes pencilPoint {
+                        from,
+                        to {
+                          transform: rotate(-90deg) translate(49px,-30px);
+                        }
+                      
+                        50% {
+                          transform: rotate(-225deg) translate(49px,-30px);
+                        }
+                      }
+                      
+                      @keyframes pencilRotate {
+                        from {
+                          transform: translate(100px,100px) rotate(0);
+                        }
+                      
+                        to {
+                          transform: translate(100px,100px) rotate(720deg);
+                        }
+                      }
+                      
+                      @keyframes pencilStroke {
+                        from {
+                          stroke-dashoffset: 439.82;
+                          transform: translate(100px,100px) rotate(-113deg);
+                        }
+                      
+                        50% {
+                          stroke-dashoffset: 164.93;
+                          transform: translate(100px,100px) rotate(-113deg);
+                        }
+                      
+                        75%,
+                        to {
+                          stroke-dashoffset: 439.82;
+                          transform: translate(100px,100px) rotate(112deg);
+                        }
+                      }
+                    }
+                }
+            }
+        }
+    }
+        //popup
+        .limit_frame{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          background-color: #00000085;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 999;
+          padding: 30px;
+          .limit_panel{
+              width: 350px;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              border-style: solid;
+              border-radius: 10px;
+              border-color: var(--action_color);
+              background-color: var(--bg2);
+              overflow: hidden;
+              color:  var(--title1);
+              .header{
+                  position: relative;
+                  width: 100%;
+                  height: 50px;
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-between;
+                  align-items: center;
+                  background-color: var(--action_color);
+                  padding: 10px;
+                  .logo{
+                      font-size: 35px;
+                      color: var(--title1);
+                  }
+                  .exite{
+                      font-size: 35px;
+                      color:  var(--title1);
+                      transition: .4s ease;
+                  }
+                  .exite:hover{
+                      transform: scale(1.1);
+                  }
+              }
+              .body_fram{
+                  width: 100%;
+                  padding: 0 20px;
+                  display: flex;
+                  flex-direction: column;
+                  padding: 10px;
+                  .small_panel{
+                      .form-group{
+                          width: 100%;
+                          display: flex;
+                          flex-direction: column;
+                          align-items: start;
+                          font-size: 13px;
+                          color: var(--title1);
+                          margin-bottom: 10px;
+                          .form-control{
+                              width: 100%;
+                              background-color: transparent;
+                              border: 1.5px solid var(--action_color);
+                              border-radius: 10px;
+                              background-color: var(--bg2);
+                          }
+                      }
+                  }
+                  .save{
+                      width: 100%;
+                      height: 100px;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      button{
+                          background-color: var(--action_color);
+                          border: 0 solid var(--action_color);
+                          border-radius: 10px;
+                          font-size: 20px;
+                          color: #fff;
+                          padding: 7px 30px;
+                      }
+                  }
+              }
+          }
+      }
+}

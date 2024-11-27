@@ -1,0 +1,184 @@
+:root {
+    --bg1-dark : #1a2035;
+    --bg2-dark : #2a3347;
+    --title1-dark :#f1f1f1;
+    --title2-dark :#d7d4d4;
+    --title3-dark :#dbdbdb;
+    --hover_sid-dark :#f3f4f63a;
+    --sid_filter-dark:#1a2035;
+    --opacity-dark:0.5;
+
+    --bg1-light : #ffffff;
+    --bg2-light : #f5f6f8;
+    --title1-light :#1e1e1e;
+    --title2-light :#515151;
+    --title3-light :#5f5f5f;
+    --hover_sid-light :#ffffffc0;
+    --sid_filter-light:#ffffff;
+    --opacity-light:0.2;
+
+    --over_card:#a09a9a65;
+}
+body{
+    overflow: hidden;
+}
+.flash_message{
+    z-index: 9999;
+}
+//override on olde style
+.bg-white{
+    background-color: var(--bg2);
+}
+.text-gray-900{
+    color: var(--title1);
+}
+.text-gray-700 {
+    color: var(--title2);;
+}
+.text-gray-600 {
+    color: var(--title3);;
+}
+.text-gray-500{
+    color: var(--title1);;
+}
+.bg-gray-800{
+    background-color: var(--action_color);
+}
+.hover\:text-gray-700:hover {
+    color: var(--action_color);
+}
+.hover\:bg-gray-100:hover {
+    color: #ededed;
+    background-color: #f3f4f617;
+}
+.focus\:ring-offset-2:focus {
+    --tw-ring-offset-width: none;
+}
+.border_correct{
+    border: 3px solid var(--action_color);
+}
+::-webkit-scrollbar{
+    width: 5px;
+    height: 5px;
+}
+::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 25px;
+    background-color: var(--action_color);
+}
+// popup
+.popup_favorit_add{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    background-color: #0000005b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .notificationCard {
+        width: 350px;
+        height: 300px;
+        background: var(--bg2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 35px;
+        gap: 10px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.123);
+        border-radius: 20px;
+        i{
+            font-size: 50px;
+            color: var(--action_color);
+        }
+        .bellIcon {
+            width: 50px;
+            margin: 20px 0px;
+          }
+
+          .notificationHeading {
+            color: var(--title1);
+            font-weight: 600;
+            font-size: 18px;
+            text-align: center;
+            span{
+                color: var(--action_color);
+            }
+          }
+          
+          .notificationPara {
+            color: var(--title2);
+            font-size: 13px;
+            text-align: center;
+          }
+          
+          .buttonContainer {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+          }
+          
+          .AllowBtn {
+            margin: 20px;
+            width: 120px;
+            height: 25px;
+            background-color: var(--action_color);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            font-size: 0.7em;
+            font-weight: 600;
+            cursor: pointer;
+          }
+        
+          .AllowBtn:hover {
+            opacity: 0.5;
+          }
+        }
+}
+//tables width
+.DataTable1{
+    min-width: 900px;
+}
+.DataTable2{
+    min-width: 700px;
+}
+.DataTable3{
+    min-width: 500px;
+}
+///////pages style
+//***************gest_pages
+@import "gest_pages/login/login.scss";
+@import "gest_pages/login/question.scss";
+
+//**************auth_pages
+@import "auth_pages/main_frame/main_fram.scss";
+
+@import "auth_pages/pages/dashboard.scss";
+@import "auth_pages/pages/tools.scss";
+@import "auth_pages/pages/categories.scss";
+@import "auth_pages/pages/edit_tools.scss";
+@import "auth_pages/pages/subscription.scss";
+@import "auth_pages/pages/data_tools.scss";
+
+// ************** admin_pages
+@import "admin_pages/dashboard.scss";
+@import "admin_pages/users.scss";
+@import "admin_pages/API_pages.scss";
+@import "admin_pages/blog.scss";
+
+///templates
+@import "auth_pages/pages/ai_template/text_template.scss";
+@import "auth_pages/pages/ai_template/image_template.scss";
+@import "auth_pages/pages/ai_template/voice_template.scss";
+@import "auth_pages/pages/ai_template/code_template.scss";
+@import "auth_pages/pages/ai_template/chat_template.scss";
+//////component style
+@import 'auth_pages/component/component.scss';
+//////respensive_page style
+@import 'respensive_page.scss';

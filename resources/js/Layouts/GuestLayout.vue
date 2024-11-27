@@ -1,0 +1,22 @@
+<script setup>
+import { Link } from '@inertiajs/vue3';
+</script>
+
+<template>
+    <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100 bg_login">
+        <div class="bear_cadre">
+            <img src="/icon/login/cycle_bear.gif" alt="" class="animated_bear">
+        </div>
+        <div class="return">
+            <i class="fa-solid fa-arrow-left"></i>
+            <a href="/">return</a>
+        </div>
+        <div class="overlay">
+            <div class="span1"></div>
+            <div class="span2"></div>
+        </div>
+        <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md sm:rounded-lg">
+            <slot />
+        </div>
+    </div>
+</template>

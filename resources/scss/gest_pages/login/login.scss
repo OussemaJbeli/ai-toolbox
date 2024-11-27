@@ -1,0 +1,453 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Cerebri Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";;
+}
+$black_coler: #151645;
+$light_coler: #fff;
+$key_color:#ffc502;
+$back_gruond1 : #15122c ;
+$back_gruond2 : #2a3347;
+$card_gruond2 : #1c2435;
+$graduant_bg:linear-gradient(95deg, #2a3347 40%, #15122c 100%);
+.bg_login{
+    background-color: $back_gruond2;
+    overflow: hidden;
+    position: relative;
+            .overlay {
+              position: absolute;
+              border-style: solid;
+              width: 100%;
+              height: 100%;
+              top: 0px;
+              left: 0px;
+              background: $graduant_bg;
+              -webkit-transform: skewY(-12deg);
+              transform: skewY(-12deg);
+              -webkit-transform-origin: 0;
+              transform-origin: 0;
+              z-index: 0; 
+              .span1 {
+                width: 33.33333%;
+                width: calc(100% / 2);
+                top: 0;
+                left: 16.66666%;
+                left: calc(calc(100% / 3) / 2);
+                right: auto;
+                background: $graduant_bg;
+                height: 200px; }
+              .span2 {
+                width: 33.33333%;
+                width: calc(100% /3);
+                bottom: 0;
+                background: $graduant_bg;
+                position: absolute;
+                height: 155px;
+                left: 3%; }
+            }
+    .bear_cadre{
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        height: 500px;
+        width: 120vw;
+        background: transparent;
+        border-width: 0 0 40px 0;
+        border-color:$key_color;
+        transform-origin: 0 100%;
+        transform: rotate(-11deg);
+        .animated_bear{
+            position: absolute;
+            bottom: -30px;
+            height: 300px;
+            width: 300px;
+            right: 50px;
+            animation: bear_bysclet 20s infinite linear;
+        }
+    }
+    .text-gray-600 {
+        color: $key_color;
+        text-decoration: none;
+        font-size: 18px;
+        outline: none;
+    }
+    .text-gray-700 {
+        color: #4e344f;
+        font-size: 15px;
+    }
+    .form_login{
+        position: relative;
+        backface-visibility: hidden;
+        width: 450px;
+        height: 450px;
+        padding: 60px 30px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 10px;
+        border-width: 2.5px;
+        border-color: $key_color;
+        border-style: solid;
+        background-color: $back_gruond2;
+        z-index: 22;
+        box-shadow: 0px 20px 20px 0px #000;
+        form{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .bear_avatar{
+                position: absolute;
+                top: -125px;
+                width: 220px;
+                height: 220px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: column;
+                border:2.5px solid transparent;
+                border-radius: 50%;
+                background-color: $back_gruond2;
+                border-color: transparent $key_color;
+                overflow: hidden;
+                background-image: url("../../public/icon/login/bear_avatar.png");
+                background-position: 0% 100%;
+                background-size: 90% 90%;
+                background-repeat: no-repeat;
+                .eye_frame{
+                    width: 26%;
+                    height: 65px;
+                    .eyes{
+                        position: relative;
+                        top: 90%;
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: row;
+                        overflow: hidden;
+                        .eye{
+                            position: relative;
+                            width: 25px;
+                            height: 25px;
+                            border-radius: 50%;
+                            background: #ffffff;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            overflow: hidden;
+                            .pupil{
+                                position: absolute;
+                                top: 20%;
+                                left: 40%;
+                                width: 10px;
+                                height: 10px;
+                                border: 0 solid transparent;
+                                border-radius: 50%;
+                                background: #0e4d5d;
+                                z-index: 0;
+                            }
+                        }
+                        .roumouch{
+                            position: absolute;
+                            top: -100%;
+                            width: 100%;
+                            height: 100%;
+                            background-color: #ffffff;
+                            z-index: 9;
+                            animation: roumouch 2s ease infinite;
+                        }
+                    }
+                }
+                //mouth
+                .mouth_frame{
+                    position: relative;
+                    width: 50px;
+                    height: 110px;
+                    display: flex;
+                    justify-content: center;
+                    .mouth{
+                        width: 35px;
+                        height: 5px;
+                        border: 0 solid transparent;
+                        border-radius: 0 0% 50% 50%;
+                        background: #ffffff;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+                //hand
+                .left_hand{
+                    position: absolute;
+                    top: 0;
+                    height: 250px;
+                    width: 100px;
+                    transform: rotateZ(150deg) translate(-40px,-250px);
+                    background-image: url("../../public/icon/login/hand.png");
+                    background-position: 0% 100%;
+                    background-size: 90% 90%;
+                    background-repeat: no-repeat;
+                    z-index: 999;
+                }
+                .right_hand{
+                    position: absolute;
+                    top: 0;
+                    height: 250px;
+                    width: 100px;
+                    transform: rotateZ(210deg) rotateY(150deg) translate(-40px,-250px);
+                    background-image: url("../../public/icon/login/hand.png");
+                    background-position: 0% 100%;
+                    background-size: 90% 90%;
+                    background-repeat: no-repeat;
+                    z-index: 999;
+                }
+            }
+            .inputs{
+                height: 100px;
+                width: 100%;
+                padding: 0 5%;
+                position: relative;
+                span{
+                    color: #fff;
+                }
+            }
+            .input{
+                height: 50px;
+                width: 100%;
+                background-color: transparent;
+                border:2.5px solid transparent;
+                border-color:  transparent transparent #ffffff;
+                border-radius: 0;
+                font-size: 20px;
+                color: #fff;
+                outline: none;
+            }
+            .eye_pass{
+                width: 50px;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                right: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                i{
+                    color: #ffc502;
+                    font-size: 20px;
+                    cursor: pointer;
+                }
+            }
+            .input:focus{
+                --tw-ring-color :transparent;
+            }
+            .forget_pass{
+                width: 90%;
+                text-align: end;
+                padding-bottom: 20px;
+                Link{
+                    color: $black_coler;
+                }
+            }
+            .login_button{
+                width: 150px;
+                height: 50px;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: transparent;
+                border: 2.5px solid $key_color;
+            }
+            .login_button:hover{
+                background-color: $key_color;
+                border: 2.5px solid transparent;
+            }
+            .forget_button{
+                width: 250px;
+            }
+            .login_button:hover, .forget_button:hover{
+                box-shadow: 0 0 20px $black_coler;
+            }
+            .login_button::before, .login_button::after{
+                background-color: $black_coler;
+                border-color: $black_coler;
+            }
+            .register{
+                text-align: center;
+                color: rgb(255, 255, 255);
+                span{
+                    Link{
+                        color: $black_coler;
+                        font-weight: 700;
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+    }
+    .form_register{
+        width: 450px;
+        height: 550px;
+        padding: 20px;
+    }
+    .form_email_verify{
+        width: 450px;
+        height: auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .bottem_butt{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            .resend_button{
+                width: 250px;
+                height: 50px;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: transparent;
+                border: 2.5px solid $key_color;
+            }
+            .resend_button:hover{
+                background-color: $key_color;
+                border: 2.5px solid transparent;
+            }
+        }
+
+    }
+    .animation{
+        position: absolute;
+        bottom: 10px;
+        right: 50px;
+        
+    }
+    .return{
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        height: 50px;
+        color: #fff;
+        z-index: 999;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        i{
+            margin-right: 10px;
+        }
+        a{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 0 5px;
+        }
+    }
+    .return:hover{
+        color: $key_color;
+    }
+}
+//roumouch
+@keyframes roumouch {
+    0%{
+        top: -5%;
+    }
+    5%{
+        top: -100%;
+    }
+    95%{
+        top: -100%;
+    }
+    100%{
+        top: -5%;
+    }
+}
+//hand
+@keyframes hand_up_left{
+    0%{
+        transform: rotateZ(150deg) translate(-40px,-250px);;
+    }
+    100%{
+        transform: rotateZ(150deg) translate(-40px,-50px);
+    }
+}
+@keyframes hand_down_left{
+    0%{
+        transform: rotateZ(150deg) translate(-40px,-50px);;
+    }
+    100%{
+        transform: rotateZ(150deg) translate(-40px,-250px);
+    }
+}
+@keyframes hand_up_right{
+    0%{
+        transform: rotateZ(210deg) rotateY(150deg) translate(-40px,-250px);
+    }
+    100%{
+        transform: rotateZ(210deg) rotateY(150deg) translate(-40px,-50px);
+    }
+}
+@keyframes hand_down_right{
+    0%{
+        transform: rotateZ(210deg) rotateY(150deg) translate(-40px,-50px);
+    }
+    100%{
+        transform: rotateZ(210deg) rotateY(150deg) translate(-40px,-250px);
+    }
+}
+//mouth
+@keyframes mouse_login_enter {
+    0%{
+        height: 5px;
+    }
+    100%{
+        height: 10px;
+    }
+}
+@keyframes mouse_login_sort {
+    0%{
+        height: 10px;
+    }
+    100%{
+        height: 5px;
+    }
+}
+@keyframes mouse_user_enter {
+    0%{
+        height: 10px;
+    }
+    100%{
+        height: 15px;
+    }
+}
+@keyframes mouse_user_sort {
+    0%{
+        height: 15px;
+    }
+    100%{
+        height: 10px;
+    }
+}
+//bysclet
+@keyframes bear_bysclet {
+    0%{
+        right: -50%;
+        transform: rotateY(0deg);
+    }
+    19%{
+        transform: rotateY(0deg);
+    }
+    20%{
+        right: 120%;
+        transform: rotateY(180deg);
+    }
+    100%{
+        right: -50%;
+        transform: rotateY(180deg);
+    }
+}

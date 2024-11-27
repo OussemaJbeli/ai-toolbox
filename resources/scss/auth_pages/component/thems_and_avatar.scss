@@ -1,0 +1,256 @@
+.theme_edit_button{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--action_color);
+    border: 0px solid transparent;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 950;
+    i{
+        font-size: 40px;
+        animation: rotate 2s linear infinite;
+    }
+    @keyframes rotate {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+}
+.theme_edit_frame{
+    z-index: 999;
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+    width: 350px;
+    height: 500px;
+    background-color: var(--bg1);
+    border: 3px solid var(--action_color);
+    border-radius: 5px;
+    p{
+        top: 0;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--title1);
+        background-color: var(--action_color);
+    }
+    .list{
+        width: 100%;
+        height: calc(100% - 50px);
+        overflow: hidden auto;
+    }
+    .sid_img{
+        width: 100%;
+        height: 60%;
+        .img_list{
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            .img_option{
+                width: 65px;
+                height: 170px;
+                margin-bottom: 10px;
+                background-color: var(--title1);
+                border: 0px solid transparent;
+                border-radius: 5px;
+                overflow: hidden;
+                background-size: cover;
+                background-position: center;
+                cursor: pointer;
+                opacity: 0.5;
+                transition: 0.4s ease;
+            }
+            .img_option:hover{
+                transform: scale(1.1);
+                opacity: 1;
+            }
+            #sid_img_0{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: var(--bg2);
+                i{
+                    color: var(--title1);
+                }
+            }
+            #sid_img_1{
+                background-image: url("../../public/icon/sid_bar/wallpapers/img_1.jpg");
+            }
+            #sid_img_2{
+                background-image: url("../../public/icon/sid_bar/wallpapers/img_2.jpg");
+            }
+            #sid_img_3{
+                background-image: url("../../public/icon/sid_bar/wallpapers/img_3.jpg");
+            }
+            #sid_img_4{
+                background-image: url("../../public/icon/sid_bar/wallpapers/img_4.jpg");
+            }
+            #sid_img_5{
+                background-image: url("../../public/icon/sid_bar/wallpapers/img_5.jpg");
+            }
+            #sid_img_6{
+                background-image: url("../../public/icon/sid_bar/wallpapers/img_6.jpg");
+            }
+            #sid_img_7{
+                background-image: url("../../public/icon/sid_bar/wallpapers/img_7.jpg");
+            }
+            #sid_img_8{
+                background-image: url("../../public/icon/sid_bar/wallpapers/img_8.jpg");
+            }
+            #sid_img_9{
+                background-image: url("../../public/icon/sid_bar/wallpapers/img_9.jpg");
+            }
+        }
+    }
+    .filters{
+        width: 100%;
+        height: 40%;
+        .filter_list{
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            .filter_option{
+                width: 40px;
+                height: 40px;
+                margin: 10px;
+                border: 0px solid transparent;
+                border-radius: 50%;
+                overflow: hidden;
+                cursor: pointer;
+            }
+            #sid_filter_1{
+                background-color: #ffc502;
+            }
+            #sid_filter_2{
+                background-color: #ff5602;
+            }
+            #sid_filter_3{
+                background-color: #8b1bd2;
+            }
+            #sid_filter_4{
+                background-color: #02bf09;
+            }
+            #sid_filter_5{
+                background-color: #02ff1b;
+            }
+            #sid_filter_6{
+                background-color: #02e1ff;
+            }
+            #sid_filter_7{
+                background-color: #020aff;
+            }
+        }
+    }
+}
+.avatar_list{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    .avatar{
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        border: 0px solid transparent;
+        border-radius: 50%;
+        overflow: hidden;
+        cursor: pointer;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+    }
+    #img_avatar1{
+        background-image: url("../../public/icon/sid_bar/avatar/avatar1.png");
+    }
+    #img_avatar2{
+        background-image: url("../../public/icon/sid_bar/avatar/avatar2.png");
+    }
+    #img_avatar3{
+        background-image: url("../../public/icon/sid_bar/avatar/avatar3.png");
+    }
+    #img_avatar4{
+        background-image: url("../../public/icon/sid_bar/avatar/avatar4.png");
+    }
+    #img_avatar5{
+        background-image: url("../../public/icon/sid_bar/avatar/avatar5.png");
+    }
+    #img_avatar6{
+        background-image: url("../../public/icon/sid_bar/avatar/avatar6.png");
+    }
+    #img_avatar7{
+        background-image: url("../../public/icon/sid_bar/avatar/avatar7.png");
+    }
+    #img_avatar8{
+        background-image: url("../../public/icon/sid_bar/avatar/avatar8.png");
+    }
+    #img_avatar9{
+        background-image: url("../../public/icon/sid_bar/avatar/avatar9.png");
+    }
+    #img_avatar10{
+        background-image: url("../../public/icon/sid_bar/avatar/avatar10.png");
+    }
+    #img_avatar11{
+        background-image: url("../../public/icon/sid_bar/avatar/avatar11.png");
+    }
+    #img_avatar12{
+        background-image: url("../../public/icon/sid_bar/avatar/avatar12.png");
+    }
+    #img_avatar13{
+        background-image: url("../../public/icon/sid_bar/avatar/avatar13.png");
+    }
+    #img_avatar14{
+        background-image: url("../../public/icon/sid_bar/avatar/avatar14.png");
+    }
+    #img_avatar15{
+        background-image: url("../../public/icon/sid_bar/avatar/avatar15.png");
+    }
+}
+.check_reset{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0 5px;
+    label{
+        width: 100%;
+        height: 50px;
+        color: var(--title1);
+        padding: 10px 0 0;
+    }
+    p{
+        color: var(--title1);
+        font-weight: 700;
+        margin-top: 10px;
+    }
+    .check_reset_radio{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        label{
+            color: var(--action_color);
+        }
+    }
+    .check_reset_list{
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        border: 2.5px solid var(--bg1);
+        border-radius: 10px;
+    }
+}

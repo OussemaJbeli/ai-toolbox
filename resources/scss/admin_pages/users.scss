@@ -1,0 +1,196 @@
+.contain_admin{
+    .h3{
+        font-size: 25px;
+        color: var(--title1);
+    }
+    .button_acount{
+        border-radius: 10px;
+        padding: 10px;
+        background-color: var(--action_color);
+        color: #fff;
+    }
+    .table_frame{
+        width: 100%;
+        overflow-x: auto;
+        margin-top: 50px;
+        .datatable{
+            color: var(--title2);
+            .dataTables_length{
+                label{
+                    color: var(--title2);
+                    select{
+                        width: 100px;
+                        border-radius: 10px;
+                    }
+                }
+            }
+            .dataTables_filter{
+                color: var(--title2);
+                label{
+                    input{
+                        border-radius: 10px;
+                    }
+                }
+            }
+            #DataTables_Table_2_info{
+                color: var(--title2);
+            }
+            .dataTables_paginate{
+                color: var(--title2);
+                span{
+                    a{
+                        border-radius: 10px;
+                        background-color: var(--bg2);
+                    }
+                }
+            }   
+            .table_edit{
+                width: 100%;
+                thead{
+                    color: var(--title1);
+                    background-color: var(--bg2);
+                    tr{
+                        .tool_num{
+                            min-width: 120px;
+                        }
+                        th{
+                            padding: 20px 10px;
+                        }
+                    }
+                }
+                tbody{
+                    tr{
+                        color: var(--title1);
+                        background-color: var(--bg1);
+                        td{
+                            padding: 20px 10px;
+                        }
+                    }
+                    tr:hover{
+                        color: var(--action_color);
+                    }
+                }
+            }
+        }
+    }
+
+    //popup
+    .limit_frame{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #00000085;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        padding: 30px;
+        .limit_panel{
+            width: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-style: solid;
+            border-radius: 10px;
+            border-color: var(--action_color);
+            background-color: var(--bg2);
+            overflow: hidden;
+            color:  var(--title1);
+            .header{
+                position: relative;
+                width: 100%;
+                height: 50px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                background-color: var(--action_color);
+                padding: 10px;
+                .logo{
+                    font-size: 35px;
+                    color: var(--title1);
+                }
+                .exite{
+                    font-size: 35px;
+                    color:  var(--title1);
+                    transition: .4s ease;
+                }
+                .exite:hover{
+                    transform: scale(1.1);
+                }
+            }
+            .body_fram{
+                width: 100%;
+                padding: 0 20px;
+                display: flex;
+                flex-direction: column;
+                padding: 10px;
+                .small_panel{
+                    .form-group{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: start;
+                        font-size: 13px;
+                        color: var(--title1);
+                        margin-bottom: 10px;
+                        .form-control{
+                            width: 100%;
+                            background-color: transparent;
+                            border: 1.5px solid var(--action_color);
+                            border-radius: 10px;
+                        }
+                    }
+                }
+                .save{
+                    width: 100%;
+                    height: 100px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    button{
+                        background-color: var(--action_color);
+                        border: 0 solid var(--action_color);
+                        border-radius: 10px;
+                        font-size: 20px;
+                        color: #fff;
+                        padding: 7px 30px;
+                    }
+                }
+            }
+            .chanels_details{
+                max-height: 300px;
+                overflow: hidden auto;
+                padding: 10px;
+                .details{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    input{
+                        width: 100%;
+                    }
+                    select{
+                        width: 100%;
+                        height: 40px;
+                        outline: none;
+                        background-color: var(--bg2);
+                        color: #fff;
+                        padding: 0 10px;
+                        border-radius: 10px;
+                        border-color: var(--action_color);
+                    }
+                    .details-group1{
+                        width: 65%;
+                    }
+                    .details-group2{
+                        width: 30%;
+                    }
+                }
+            }
+        }
+    }
+}
