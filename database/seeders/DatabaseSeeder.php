@@ -625,7 +625,20 @@ class DatabaseSeeder extends Seeder
 
 
         ///////////exemples
-
+        $APIs = [
+            ['title'=>'Chat GPT 3.5 turbo','key'=>'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'],
+            ['title'=>'Stable Diffusion','key'=>'sk-lEsa7DvczPYvPiESonEY8MKcakvKYkw1jNP8SpJB75fu4ZFo'],
+            ['title'=>'assembly.ai','key'=>'ffaa943fda3c45cd8640fb420e194e0a'],
+            ['title'=>'elevenlabs.ai','key'=>'17affa67da4985f187c07b6a09ad1c15'],
+            ['title'=>'stripe public key','key'=>'pk_test_51OguR0GVBvitXaWng9tND2N64brJ9bLLgTjG937DGY6FrCfWxwD3IOGqll9fVOTfY9evACGmT6aBNVpc17MGFd1T00lecMuKER'],
+            ['title'=>'stripe secret key','key'=>'sk_test_51OguR0GVBvitXaWnJ6oeIsCE7ycigjB60CiDLWAqhsqSJjqezPsyYQWN2LPOUoJmmOnA8eLEJ07GzqvYZGn4DTiJ00CPkTyhve'],
+        ];
+        foreach ($APIs as $API) {
+            DB::table('APIsKeys')->insert([
+                'title' => $API['title'],
+                'key' => $API['key'],
+            ]);
+        };
         //blog
         $blogsExemple = [
             ['id_user'=>'1','title'=>'integrating AI: Enhancing Our Daily Lives','continue'=>'<p>In the rapidly evolving landscape of technology, artificial intelligence (AI) stands at the forefront of innovation, promising to reshape our daily lives in profound ways. From smart assistants that manage our schedules to AI-driven platforms that offer personalized learning experiences, the integration of AI into everyday life is making services more efficient and accessible.</p><p>&nbsp;</p><p>The future of AI in our daily lives is not just about automation or convenience; its about augmenting human capabilities and creating more meaningful interactions. With advancements in natural language processing, AI can now understand and respond to human emotions, offering support in mental health applications. In the realm of smart homes, AI algorithms optimize energy consumption, contributing to a sustainable planet.</p><p>Moreover, personalized healthcare powered by AI is becoming a reality. From early detection of diseases to tailored treatment plans, AI is set to revolutionize how we approach health and wellness. The intersection of AI and IoT (Internet of Things) further enables the monitoring of health parameters in real-time, ensuring a proactive approach to health management.</p><p>&nbsp;</p><p>As we look to the future, the ethical considerations of AI integration become increasingly important. Ensuring privacy, security, and fairness in AI applications is crucial to harness its full potential positively. By addressing these challenges head-on, we can navigate the complexities of AI integration and unlock a future where technology enhances the human experience, making our lives more connected, efficient, and enriched.</p>','image_path'=>'/icon/blog_image/blog1.webp'],
